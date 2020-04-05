@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        .menu a {
+            color: white;
+            padding-left: 10px;
+
+            /* display: block; */
+        }
+
+        .menu a:hover {
+            color: #808080;
+        }
+
+        .container {
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: 2%;
+        }
+
+        .container a {
+            display: block;
+            color: black;
+            font-size: 20px;
+        }
+
+        .metal {
+            /* width: 20%; */
+            padding: 15px;
+            border: 1px solid rgba(0, 0, 0, .125);
+
+        }
+
+        .container a:hover {
+            text-decoration: underline;
+        }
+
+        .column {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-color: #808080;text-align: center;padding: 15px;">
+        <h1 style="color: white; ">Bilge Adam</h1>
+    </div>
+    <div style="background-color: #333; padding: 20px;;" class="menu">
+        <a href="#">Anasayfa</a>
+        <a href="#">Hakkımızda</a>
+        <a href="#">İletişim</a>
+    </div>
+    <div class="container">
+        <div class="column">
+            <h1 style="margin-top: 0px;">Groups</h1>
+
+            <div style="background-color: #007bff;border-radius: .25rem .25rem 0 0" class="metal">
+                <a href="#" style="color: white">Iron Maiden</a>
+            </div>
+            <div class="metal">
+                <a href="#">Rammstein</a>
+            </div>
+            <div class="metal" style="border-radius:0 0 .25rem .25rem">
+                <a href="#">Parkway Drive</a>
+            </div>
+        </div>
+        <div class="column" style="margin-left: 25px; width: 900px;">
+            <div style="float: left;">
+                <img src="http://placehold.it/900x400" alt="">
+
+            </div>
+            <div style="float: left;">
+                <h3>Dortmun Konser - Rammstein</h3>
+                <h4>25 $</h4>
+                <p style="display: inline;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio,
+                    obcaecati! Porro fugiat eos blanditiis incidunt magni impedit aperiam placeat, culpa quis amet
+                    libero quos nesciunt dolorum eius similique ipsam nihil!</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
