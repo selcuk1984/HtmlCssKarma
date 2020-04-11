@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center;">
+    <div>
+        <label for="Sayı - 1">Sayı 1</label>
+        <input type="text" id="sayi1">
+    </div>
+    <hr>
+    <div>
+        <label for="Sayı - 2">Sayı 2</label>
+        <input type="text" id="sayi2">
+    </div>
+    <hr>
+    <div>
+        <button onclick="Topla()">Topla</button>
+        <button onclick="Cikar()">Çıkar</button>
+        <button onclick="Carp()">Çarp</button>
+        <button onclick="Bol()">Böl</button>
+    </div>
+</body>
+
+</html>
+<script>
+
+    function Topla() {
+
+        var x = document.getElementById("sayi1").value;
+        var y = document.getElementById("sayi2").value;
+
+        alert(Number(x) + Number(y));
+
+    }
+
+    function Bol() {
+
+        var x = document.getElementById("sayi1").value;
+        var y = document.getElementById("sayi2").value;
+
+        alert(Number(x) / Number(y));
+
+    }
+
+    function Cikar() {
+
+        var x = document.getElementById("sayi1").value;
+        var y = document.getElementById("sayi2").value;
+
+        alert(Number(x) - Number(y));
+
+    }
+
+    function Carp() {
+
+        var x = document.getElementById("sayi1").value;
+        var y = document.getElementById("sayi2").value;
+
+        alert(Number(x) * Number(y));
+
+    }
+
+
+
+
+</script>

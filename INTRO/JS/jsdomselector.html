@@ -9,16 +9,34 @@
 
 <body style="text-align: center;">
     <div>
-        <label for="">Ad</label>
-        <input type="text" id="ad" class="main">
+        <div>
+            <label for="">Ad</label>
+            <input type="text" id="ad" class="main">
+        </div>
+        <div>
+            <button onclick="Goster()">Yazdır</button>
+        </div>
     </div>
+<hr>
     <div>
-        <button onclick="Goster()">Yazdır</button>
+        <div>
+            <div>
+                <label for="">Sayı</label>
+                <input type="text" id="sayi" class="main">
+            </div>
+        </div>
+        <div>
+             <button onclick="Hesap()">Hesapla</button>
+        </div>
     </div>
 </body>
-
 </html>
 <script>
+    //id si sayi olan input a girilen değeri 2 ile çarp ekrana yazdır
+    function Hesap(){
+        var y = document.getElementById("sayi").value;
+        alert(y * 2);
+    }
 
     function Goster() {
 
@@ -27,8 +45,6 @@
 
         alert(x);
     }
-
-
 
 
 </script>
