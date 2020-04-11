@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center;">
+    <div>
+        <input type="text" id="ad">
+    </div>
+    <ul id="groups">
+        <li>Iron Maiden</li>
+        <li>Parkway Drive</li>
+        <li>Rammstein</li>
+    </ul>
+    <div>
+        <button onclick="Ekle()">Ekle</button>
+        <button onclick="Temizle()">Temizle</button>
+    </div>
+</body>
+
+</html>
+<script>
+
+    function Ekle() {
+       var x =  document.createElement("li");
+       x.innerHTML = document.getElementById("ad").value;
+       document.getElementById("groups").appendChild(x)
+       document.getElementById("ad").value = "";
+    }
+
+    function Temizle(){
+        document.getElementById("groups").innerHTML = "";
+    }
+</script>
