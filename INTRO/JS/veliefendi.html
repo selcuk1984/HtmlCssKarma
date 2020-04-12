@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        width: 250px;
+        height: 75px;
+        margin-left: 10px;
+    }
+</style>
+
+<body>
+    <div style="text-align: center;"">
+        <button onclick="Start()">Start</button>
+    </div>
+    <hr>
+    <div>
+        <img src="at1.jpg" id="at1">
+    </div>
+    <hr>
+    <div>
+        <img src="at2.jpg" id="at2">
+    </div>
+    <hr>
+
+    <div>
+        <img src="at3.jpg" id="at3">
+    </div>
+</body>
+
+</html>
+<script>
+//1400 px e kim ulaşırsa o yarışı kazansın Alert olarak ekrana yazdır. 
+// "At1 kazandı!!!"
+
+function Start(){
+    var x = 10;
+    var y = 10;
+    var z = 10;
+    setInterval(function () {
+        var rastgele1 = Math.floor(Math.random() * 100);
+        var rastgele2 = Math.floor(Math.random() * 100);
+        var rastgele3 = Math.floor(Math.random() * 100);
+
+        x = x + rastgele1;
+        y = y + rastgele2;
+        z = z + rastgele3;
+
+        document.getElementById("at1").style.marginLeft = x + "px";
+        document.getElementById("at2").style.marginLeft = y + "px";
+        document.getElementById("at3").style.marginLeft = z + "px";
+
+    }, 500);
+
+
+}
+
+
+
+</script>
