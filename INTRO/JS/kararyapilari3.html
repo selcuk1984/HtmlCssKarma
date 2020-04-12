@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center;">
+    <div>
+        <label for="">Ürün - 1</label>
+        <input type="text" id="urun1">
+    </div>
+    <div>
+        <label for="">Ürün - 2</label>
+        <input type="text" id="urun2">
+    </div>
+    <div>
+        <button onclick="Hesapla()">Hesapla</button>
+    </div>
+</body>
+
+</html>
+<script>
+
+
+
+    //1) Ekranda 2 adet input olsun. Bir adet buton.
+    //İki inputa girilen fiyatların toplam fiyat 200 TL’den fazla ise, 2.üründen %25 indirim yaparak ödenecek tutarı göster . Alert olarak
+
+    function Hesapla() {
+        var x = Number(document.getElementById("urun1").value);
+        var y = Number(document.getElementById("urun2").value);
+
+        var toplam = x + y;
+
+        if (toplam > 200) {
+            y = y * 0.75;
+            toplam = x + y;
+            alert(toplam)
+        }
+        else {
+            alert(toplam);
+        }
+    }
+</script>

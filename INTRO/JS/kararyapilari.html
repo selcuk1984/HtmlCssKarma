@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center;">
+    <div>
+        <input type="text" id="veri">
+        <button onclick="Test()">Tıkla</button>
+    </div>
+</body>
+
+</html>
+<script>
+    function Test(){
+        var data = Number(document.getElementById("veri").value);
+        
+        if(data == 100)
+        {
+            alert("Sayı 100!")
+        }
+
+        //Eşit değilse !
+        if(data != 100){
+            alert("Sayı 100 e eşit değil!");
+        }
+
+    }
+
+    
+
+
+</script>

@@ -1,0 +1,3 @@
+1) Ekranda 2 adet input olsun. Bir adet buton.
+ İki inputa girilen fiyatların toplam fiyat 200 TL’den fazla ise, 2.üründen %25 indirim yaparak ödenecek tutarı göster . Alert olarak
+ 

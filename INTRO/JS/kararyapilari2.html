@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <div>
+        <label for="">Name:</label>
+        <input type="text" id="name">
+    </div>
+    <div>
+        <label for="">Password</label>
+        <input type="password" id="pwd">
+    </div>
+    <div>
+        <button onclick="Login()">Login</button>
+    </div>
+</body>
+</html>
+
+<script>
+    //username cagatay şifre 123 ise giriş yap. DEĞİLSE uyarı ver!
+    function Login(){
+        var username = document.getElementById("name").value;
+        var password = document.getElementById("pwd").value;
+
+        if(username == "cagatay" && password == "123"){
+            alert("Hoşgeldin crazy boy!! IPhone X kazandınız!!");
+        }
+        else{
+            alert("Hayırdır hemşerim!!")
+        }
+
+
+    }
+</script>
