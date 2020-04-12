@@ -1,0 +1,45 @@
+Textbox dan girilen sayıyın karesini başka bir textbox a yazdır 
+
+3 ayrı textboxtan girilen sayıların ortalamasını bir label a yaz 
+
+Ekrandaki butonu her tıkladığında tıklanılan butonu 20 px sağa kaydır 
+
+Ekrana 3 buton koy. Hangi butona tıklanırsa DİĞER butonlar 20 px sağa kaysın 
+
+Ekrana bir text box bir buton koy. Textbox a girilen sayı kadar FORM genişlesin
+
+ Bir login ekranı tasarla. Kullanıcı adı “a@a.com" ve şifre “123” ise formdaki elementleri REMOVE et ve ekrana “İşlem başarılı” yazdır. Değilse “Kullanıcı adı veya şifre hatalı” yazdır 
+
+ Ekrana 5 adet text box koy.  Girilen notların ortalamasını yıl sonu notu olarak mesaj olarak göster. (örneğin ortalama 32 ise not 1) 
+
+ Trafik lambası uygulaması.. Ekrana 3 buton koy. Bunların trafik lambasındaki sarı, kırmızı ve yeşili temsil edecek. 4. buton ise start butonu olsun. Start butonuna bastığında ekrandaki butonlar trafik lambasındaki gibi belirli saniyelerle sarı-kırmızı ve yeşil olsun. (timer kullanılacak) 
+
+“10200” sayısını number e çevirip ekrana yaz 
+
+“12.5” sayısını number a çevir ve ekrana yaz 
+
+Ekrandan girilen sayıyı 1.18 le çarpıp ekrana yaz. 
+
+Ekrandan girilen iki sayıyı toplayıp ekrana yaz 
+
+Ekrandan girilen sayı 100 den büyükse ekrana “PAHALI ” yazdır 
+
+Ekranan girilen sayıya göre günü yazdır. (1 ise pazartesi, 2 ise Salı vb.) 
+
+Klavyeden öğrencinin 2 adet not bilgisi girildikten sonra, ortalama 50 ve üzerinde ise ekrana “Geçti” değilse “Kaldı” yazdır 
+
+Belirlenen kullanıcı adı ve şifre doğru girildiğinde “Giriş Başarılı”, yanlış girildiğinde “Girdiğiniz kullanıcı adı veya şifre hatalı” yazdır 
+
+Girilen sayının negatif, pozitif veya sıfır olduğunu ekranda belirt 
+
+Klavyeden iki ürünün fiyatı girildiğinde toplam fiyat 200 TL’den fazla ise, 2.üründen %25 indirim yaparak ödenecek tutarı göster 
+
+Girilen 3 sayıdan en az biri 50’den büyükse “Yeterli”, aksi halde “Yetersiz” mesajı veren program 
+
+ 
+
+Girilen 3 sayının hepsi 0’dan büyük ve çift ise “Başarılı Giriş”, aksi halde “Başarısız giriş” mesajı veren program 
+
+ 
+
+Girilen iki sayıyı karşılaştıran ve büyük, küçük ya da eşit olma durumunu gösteren program. Örneğin “2. Girdiğiniz sayı 1. den büyük” gibi 

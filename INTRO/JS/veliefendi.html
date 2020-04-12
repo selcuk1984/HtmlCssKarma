@@ -35,14 +35,32 @@
 
 </html>
 <script>
+
+
 //1400 px e kim ulaşırsa o yarışı kazansın Alert olarak ekrana yazdır. 
-// "At1 kazandı!!!"
+// "At1 kazandı!!!"  
+//Interval durdurmam gerek!!
 
 function Start(){
+
+    // window.locat window.location.hrefion.href = "http://www.google.com"
+
     var x = 10;
     var y = 10;
     var z = 10;
     setInterval(function () {
+        
+        if(x >= 1151){
+            alert("At1 kazandı!!");
+        }
+        if(y >= 1151){
+            alert("At2 kazandı!!")
+        }
+        if(z => 1151){
+            alert("At3 kazandı!!")
+        }
+
+
         var rastgele1 = Math.floor(Math.random() * 100);
         var rastgele2 = Math.floor(Math.random() * 100);
         var rastgele3 = Math.floor(Math.random() * 100);
