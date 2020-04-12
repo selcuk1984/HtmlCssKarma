@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <div>
+        <input type="text" name="" id="sayi">
+        <button onclick="Kontrol()">Kontrol</button>
+    </div>
+</body>
+</html>
+<script>
+
+
+function Kontrol(){
+    var sayi = Number(document.getElementById("sayi").value);
+
+    //alert(Math.sign(sayi));
+
+    if(sayi < 0){
+        alert("Bu sayı negatif");
+    }
+    if(sayi == 0){
+        alert("Bu sayı 0");
+    }
+    if(sayi > 0){
+        alert("Sayı 0 dan büyük");
+    }
+}
+</script>

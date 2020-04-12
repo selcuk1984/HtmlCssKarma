@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <button onclick="Kos()">KOŞ!!</button>
+    </div>
+    <hr>
+    <div>
+        <img src="kosanayi.jpg" style="margin-left: 10px;" id="ayi" width="200" height="200" alt="">
+    </div>
+</body>
+
+</html>
+<script>
+    function Kos() {
+
+        var pozisyon = 10;
+        setInterval(function () {
+
+        pozisyon = pozisyon + 10;
+        document.getElementById("ayi").style.marginLeft = pozisyon + "px";
+
+        }, 500)
+
+    }
+
+</script>
+
+
+<script>
+    // var sayi = 5;
+
+    // setInterval(function () {
+    //     sayi = sayi + 1;
+    //     console.log(sayi);
+
+    // }, 2000)
+</script>

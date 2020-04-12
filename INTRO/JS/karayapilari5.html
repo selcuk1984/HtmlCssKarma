@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center;">
+    <div>
+        <label for="">Not:1</label>
+        <input type="text" id="not1">
+    </div>
+    <div>
+        <label for="">Not:2</label>
+        <input type="text" id="not2">
+    </div>
+    <div>
+        <button onclick="Hesap()">Sonuç</button>
+    </div>
+</body>
+
+</html>
+<script>
+    function Hesap() {
+        var x = Number(document.getElementById("not1").value);
+        var y = Number(document.getElementById("not2").value);
+
+        // veya bağlacı için ||
+        if ((x < 100 && x > 0) && (y < 100 && y > 0)) {
+            var ort = (x + y) / 2;
+
+            if (ort >= 50) {
+                alert("Geçtim!!! olley");
+            }
+            else {
+                alert("Hoca bıraktı!!")
+            }
+        }
+        else{
+            alert("Düzgün sayı gir....")
+        }
+
+
+    }
+</script>

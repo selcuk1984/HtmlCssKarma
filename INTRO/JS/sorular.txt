@@ -1,8 +1,9 @@
 1) Girilen sayının negatif, pozitif veya sıfır olduğunu ekranda belirt 
 
-2) Klavyeden öğrencinin 2 adet not bilgisi girildikten sonra, 
+2) Öğrencinin 2 adet not bilgisi girildikten sonra, 
 ortalama 50 ve üzerinde ise ekrana “Geçti” değilse “Kaldı” yazdır 
-
+( Not 0 ile 100 arasında olmalıdır! )
+    //bu koşul yerine min max attr konulabilir
 
 
 
