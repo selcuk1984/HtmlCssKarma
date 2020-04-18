@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="Hesapla1()">Hesapla - 1</button>
+    </div>
+    <div>
+        <button id="btn2">Hesapla - 2</button>
+    </div>
+    <div>
+        <button class="main">Test - 1</button>
+        <button class="main">Test - 2</button>
+        <button class="main">Test - 3</button>
+    </div>
+</body>
+</html>
+<script>
+    function Hesapla1(){
+        console.log("Hesapla!");
+    }
+
+
+    document.getElementById("btn2").addEventListener("click",function(){
+        console.log("Hesapla - 2 !!")
+    })
+
+    document.getElementsByClassName("main")[1].addEventListener("click",function(){
+        console.log("Main class ına ait buton tıklandı!!")
+    });
+
+ 
+
+    console.log(document.getElementsByClassName("main"));
+</script>

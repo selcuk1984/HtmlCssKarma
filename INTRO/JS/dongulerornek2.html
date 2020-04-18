@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+</body>
+
+</html>
+<script>
+
+
+    //yan yana 10 buton oluştur.
+    for (i = 0; i < 50; i++) {
+
+        var button = document.createElement("button");
+        button.innerHTML = "Freddy";
+        button.id = i;
+
+        document.getElementById("container").appendChild(button);
+    }
+
+    //0 ile 49 arasında rastgele 10 tane sayı oluştur! sayılar aynı olmamalı
+
+    var sayilar = [];
+    for (i = 0; i < 10; i++) {
+
+        var rastgele = Math.floor(Math.random() * 49);
+
+        //dizide eleman yoksa EKLE!!!
+        if(sayilar.indexOf(rastgele) == -1){
+            sayilar.push(rastgele);
+        }
+    }
+
+    console.log(sayilar);
+
+</script>

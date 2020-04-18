@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .soru3 button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <div>
+        <div>
+            <input type="text" id="sayi">
+        </div>
+        <div>
+            <button onclick="Hesapla()">Hesapla</button>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <input type="text" id="sayi1">
+        </div>
+        <div>
+            <input type="text" id="sayi2">
+        </div>
+        <div>
+            <input type="text" id="sayi3">
+        </div>
+        <div>
+            <label for="" id="sonuc">Sonuç: </label>
+        </div>
+        <div>
+            <button onclick="OrtalamaHesap()">Ortalama Hesapla</button>
+        </div>
+    </div>
+
+    <div class="soru3">
+        <div>
+            <button id="btn1" onclick="Hesapla1()">Button - 1</button>
+        </div>
+        <div>
+            <button id="btn2" onclick="Hesapla2()">Button - 2</button>
+        </div>
+        <div>
+            <button id="btn3" onclick="Hesapla3()">Button - 3</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+
+    var x = 10;
+    var y = 10;
+    var z = 10;
+
+    function Hesapla1() {
+        y = y + 20;
+        z = z + 20;
+
+        document.getElementById("btn2").style.marginLeft = y + "px";
+        document.getElementById("btn3").style.marginLeft = z + "px";
+
+    }
+
+    function Hesapla2() {
+        x = x + 20;
+        z = z + 20;
+
+        document.getElementById("btn1").style.marginLeft = x + "px";
+        document.getElementById("btn3").style.marginLeft = z + "px";
+
+    }
+
+    function Hesapla3() {
+        x = x + 20;
+        y = y + 20;
+
+        document.getElementById("btn1").style.marginLeft = x + "px";
+        document.getElementById("btn2").style.marginLeft = y + "px";
+
+    }
+
+    //Ekrana 3 buton koy. Hangi butona tıklanırsa DİĞER butonlar 20 px sağa kaysın
+
+    function OrtalamaHesap() {
+        var x = Number(document.getElementById("sayi1").value);
+        var y = Number(document.getElementById("sayi2").value);
+        var z = Number(document.getElementById("sayi3").value);
+
+        var q = (x + y + z) / 3;
+
+        document.getElementById("sonuc").innerHTML = "Sonuç: " + q.toFixed(2);
+
+
+    }
+
+    //Girilen sayının negatif, pozitif veya sıfır olduğunu ekranda belirt 
+    function Hesapla() {
+        var x = document.getElementById("sayi").value;
+
+        if (x < 0) {
+            console.log("Sayı 0'dan küçüktür!");
+        }
+        else if (x == 0) {
+            console.log("Sayı 0'dır!");
+        }
+        else if (x > 0) {
+            console.log("Sayı 0 dan büyüktür!");
+        }
+        else {
+            console.log("Geçersiz sayı")
+        }
+
+    }
+</script>

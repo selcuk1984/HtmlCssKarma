@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="metal">
+        <button id="btn">Ekle</button>
+    </div>
+    <div>
+        <input type="text" id="no">
+        <button id="cikar">Noya Göre Gruptan Çıkar</button>
+    </div>
+    <div>
+        <input type="text" id="isim">
+        <button id="cikar2">İsme Göre Gruptan Çıkar</button>
+    </div>
+</body>
+</html>
+<script>
+    var groups = ['Rotting Christ','Razor','Pentagram','Moonspell'];
+    groups.push('Kahtalı Mıçı');
+
+    document.getElementById("btn").addEventListener("click",function(){
+        var x = document.getElementById("metal").value;
+        if(x != ""){
+            groups.push(x);
+        }
+    });
+
+
+
+    document.getElementById("cikar").addEventListener("click",function(){
+        var x = document.getElementById("no").value;
+        groups.splice(2,1);      
+    });
+
+
+    document.getElementById("cikar2").addEventListener("click",function(){
+        var ad = document.getElementById("isim").value;
+        var no = groups.indexOf(ad);
+        
+        groups.splice(no,1);
+    })
+
+    // 2. dizi olusturma yöntemi!
+    // var cities = new Array();
+    // cities.push("Sao Paulo");
+    // cities.push("Barcelona");
+    // cities.push("Beirut");
+
+
+
+</script>

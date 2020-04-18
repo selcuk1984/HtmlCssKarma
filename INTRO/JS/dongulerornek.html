@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center;">
+    <div>
+        <input type="text" id="sayi">
+        <button id="btn">Toplam</button>
+    </div>
+    <hr>
+    <div>
+        <input type="text" id="name">
+        <button id="btnbul">Bul</button>
+    </div>
+</body>
+
+</html>
+<script>
+    //bonus soru?
+
+    var sehirler = ['İstanbul', 'Chicago', 'Koala Lumpur', 'Artvin', 'İzmir', 'Manisa'];
+
+    document.getElementById("btnbul").addEventListener("click", function () {
+        
+        var sehirad = document.getElementById("name").value.toLowerCase();
+
+        for (i = 0; i < sehirler.length; i++) {
+            
+            if(sehirler[i].toLowerCase() == sehirad){
+                alert(i);
+            }
+        }
+    })
+
+
+
+
+    //ekrandan girilen sayıya kadar olan sayıların toplamı
+    document.getElementById("btn").addEventListener("click", function () {
+
+        var sayi = Number(document.getElementById("sayi").value);
+
+        var toplam = 0;
+        //0+1+2+3+4
+        for (i = 0; i <= sayi; i++) {
+            toplam = toplam + i;
+        }
+
+    })
+
+</script>
