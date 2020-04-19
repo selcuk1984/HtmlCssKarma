@@ -9,15 +9,29 @@
 
 <body>
     <div id="container">
-
+        <!-- <button id="test">Deneme</button> -->
     </div>
 </body>
 
 </html>
 <script>
+    //0 ile 49 arasında rastgele 10 tane sayı oluştur! sayılar aynı olmamalı
 
+    var sayilar = [];
+    for (i = 0; i < 10; i++) {
 
-    //yan yana 10 buton oluştur.
+        var rastgele = Math.floor(Math.random() * 49);
+
+        //dizide eleman yoksa EKLE!!!
+        if (sayilar.indexOf(rastgele) == -1) {
+            sayilar.push(rastgele);
+        }
+        else {
+            i--;
+        }
+    }
+
+    //yan yana 50 buton oluştur.
     for (i = 0; i < 50; i++) {
 
         var button = document.createElement("button");
@@ -27,19 +41,47 @@
         document.getElementById("container").appendChild(button);
     }
 
-    //0 ile 49 arasında rastgele 10 tane sayı oluştur! sayılar aynı olmamalı
 
-    var sayilar = [];
-    for (i = 0; i < 10; i++) {
+    var buttons = document.getElementsByTagName("button");
 
-        var rastgele = Math.floor(Math.random() * 49);
+    for (i = 0; i < buttons.length; i++) {
 
-        //dizide eleman yoksa EKLE!!!
-        if(sayilar.indexOf(rastgele) == -1){
-            sayilar.push(rastgele);
+        document.getElementById(buttons[i].id).addEventListener("click",MayinControl)
+
+    }
+
+    var sayac = 0;
+
+    function MayinControl(){
+        var tiklananid = Number(this.id);
+        
+        if(sayilar.indexOf(tiklananid) != -1){
+
+            var freddy = document.createElement("img");
+            freddy.src = "freddy.jpg";
+            document.getElementById("container").appendChild(freddy);
+
+            alert("HA HU HA HU HA!!");
+
+        }
+        else{
+         
+            sayac++;
+            if(sayac == 5){
+                alert("Rüyadan uyandım!!!");
+            }
+
         }
     }
 
-    console.log(sayilar);
+
+
+
+    // document.getElementById("test").addEventListener("click",cagatay);
+
+    // function cagatay() {
+
+    //     alert("Deneme butonu tıklandı!!");
+    // }
 
 </script>

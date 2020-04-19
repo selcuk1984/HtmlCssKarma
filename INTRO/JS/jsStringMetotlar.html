@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center;">
+    <input type="text" id="fullname">
+    <button id="btn">Hödö</button>
+</body>
+
+</html>
+<script>
+    //inputa girilen isim ve soyisim ekrana birinci harfleri büyük olarak yazsın (alert olarak)
+
+    var ad = "çağatay";
+
+    //tüm harfleri büyütür
+    ad.toUpperCase()
+
+    //tüm harfleri küçültür
+    ad.toLowerCase();
+
+    // space temizleyici
+    ad.trim();
+
+    //split verilen karakter doğrultusunda dizi oluşturur.
+    var sehirler = "istanbul izmir Kingston";
+    var sehirdizi = sehirler.split(' ');
+
+    //metnin ilk harfini büyüt
+    var country = "deutschland";
+    var newcountry = "";
+
+    for (i = 0; i < country.length; i++) {
+
+        if (i == 0) {
+
+            newcountry = newcountry + country[i].toUpperCase();
+
+        }
+        else {
+            newcountry = newcountry + country[i];
+
+        }
+
+    }
+
+
+    country = country.substr(0, 1).toUpperCase() + country.substr(1);
+
+
+
+
+</script>
