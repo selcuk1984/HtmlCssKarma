@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.0.min.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <label for="">Metin</label>
+        <input type="text" id="data">
+    </div>
+    <div>
+        <label for="">Adet</label>
+        <input type="text" id="count">
+    </div>
+    <div>
+        <button id="btnekle">Ekle</button>
+        <button id="btntemizle">Temizle</button>
+    </div>
+    <ul></ul>
+</body>
+
+</html>
+<script>
+    $("#btnekle").click(function () {
+        var veri = $("#data").val();
+        var adet = $("#count").val();
+
+        for (i = 0; i < adet; i++) {
+            $("ul").append("<li>" + veri + "</li>");
+        }
+    })
+
+    $("#btntemizle").click(function(){
+        $("ul li").remove();
+    })
+</script>
