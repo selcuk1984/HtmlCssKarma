@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.0.min.js"></script>
+
+</head>
+<body>
+    <button id="btnhide">Hide</button>
+    <button id="btnshow">Show</button>
+    <button id="btntext">Text Değiş</button>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, illum ex iure voluptas cumque, quo ad accusamus quibusdam qui eligendi assumenda nisi. Explicabo cumque nihil vero doloremque, repudiandae cum quis.</p>
+
+</body>
+</html>
+<script>
+    $("#btnhide").click(function(){
+        $("p").fadeOut(2000);
+
+    })
+
+    $("#btnshow").click(function(){
+        $("p").show();
+    })
+
+    $("#btntext").click(function(){
+        // $("p").text("artık lorem morem yok!");
+        $("p").html("artık lorem morem yok!");
+
+    })
+</script>

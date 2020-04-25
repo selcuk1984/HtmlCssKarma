@@ -29,11 +29,17 @@
         
         var sehirad = document.getElementById("name").value.toLowerCase();
 
+        var bulundumu = false;
         for (i = 0; i < sehirler.length; i++) {
             
             if(sehirler[i].toLowerCase() == sehirad){
                 alert(i);
+                bulundumu = true;
             }
+        }
+
+        if(bulundumu == false){
+            alert("Şehir bulunamadı :D");
         }
     })
 

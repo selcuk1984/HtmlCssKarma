@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.0.min.js"></script>
+    <style>
+        .ulkeler{
+            color:aqua;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <select>
+        <option>Amerika</option>
+        <option>Asya</option>
+        <option>Afrika</option>
+    </select>
+    <div>
+        <input type="text" id="data">
+    </div>
+    <div>
+        <button>Ekle</button>
+        <button>Ekle2</button>
+        <button>Ekle3</button>
+        <button>Ekle4</button>
+
+    </div>
+    <ul>
+        <li class="ulkeler">Yeni Zelanda</li>
+    </ul>
+</body>
+</html>
+<script>
+    $("button").click(function(){
+
+        console.log($(this));
+
+        var ulke = $("#data").val();
+        $("ul").append("<li class='ulkeler'>" + ulke + "</li>");
+    })
+
+    $("select").change(function(){
+        console.log("select change!!");
+    })
+
+    // $("li").click(function(){
+    //     console.log("hangi li tıklandı??");
+    // })
+
+
+
+    // var htmlelement = `<li class='main' id="3">`  + 33 + `</li>`
+</script>

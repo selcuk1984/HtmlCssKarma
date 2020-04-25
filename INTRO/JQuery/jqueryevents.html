@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.0.min.js"></script>
+
+</head>
+<body>
+    <input type="text" id="veri1">
+    <button>Deneme</button>
+  
+</body>
+</html>
+<script>
+
+    //inputa değer göndermek
+    $("#veri1").val("aman da aman");
+    document.getElementById("veri1").value = "aman da aman";
+
+    $("button").click(function(){
+
+        //mevcut inputtan değer almak
+        var data = $("#veri1").val();
+
+        console.log(data);
+
+    })
+</script>

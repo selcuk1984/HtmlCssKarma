@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center;">
+    <div>
+        <input type="text" id="sayi1">
+        <input type="text" id="sayi2">
+    </div>
+    <div>
+        <button id="hsp">Hesapla</button>
+    </div>
+    <div>
+        <input type="text" id="sayi3">
+    </div>
+    <div>
+        <button id="ters">Ters Çevir</button>
+    </div>
+
+    <div>
+        <input type="text" id="veri1">
+        <input type="text" id="veri2">
+        <input type="text" id="veri3">
+    </div>
+    <div>
+        <button id="buyukbul">En Büyüğünü Bul</button>
+    </div>
+</body>
+
+</html>
+<script>
+    //Çarpma opeartorü kullanmadan dışarıdan girilen iki sayının çarpımını bulan program.
+    // 4 *2  4+4  veya 2+2+2+2
+
+    document.getElementById("hsp").addEventListener("click", function () {
+        var x = Number(document.getElementById("sayi1").value);
+        var y = Number(document.getElementById("sayi2").value);
+
+        var sonuc = 0;
+        for (i = 0; i < y; i++) {
+            sonuc = sonuc + x;
+        }
+
+        alert(sonuc);
+    })
+
+
+</script>
+
+<script>
+    //Dışarıdan girilen bir sayının rakamlarını tersine çeviren program.Örneğin 123 girdiyse ekrana 321 yazsın gibi.
+
+    document.getElementById("ters").addEventListener("click", function () {
+        var sayi = document.getElementById("sayi3").value;
+
+        //1. yol
+        // for (i = 2; i >= 0; i--) {
+        //     console.log(sayi[i]);
+        // }
+
+        //2. yol
+        console.log(Array.from(sayi).reverse());
+
+
+
+    })
+
+</script>
+
+
+<script>
+    var sayilar = [];
+    //Dışarıdan girilen 3 sayının en büyüğünü bulan program
+    document.getElementById("buyukbul").addEventListener("click", function () {
+        var x = Number(document.getElementById("veri1").value);
+        var y = Number(document.getElementById("veri2").value);
+        var z = Number(document.getElementById("veri3").value);
+
+        var enbuyuksayi = 0;
+        if (x > y && x > z) {
+
+            enbuyuksayi = x;
+
+        }
+        else {
+            if (y > z) {
+                enbuyuksayi = y;
+            }
+            else {
+                enbuyuksayi = z;
+            }
+
+        }
+
+        console.log(enbuyuksayi);
+
+
+    });
+
+
+
+    function sortNumber(a, b) {
+
+        console.log(a);
+        console.log(b);
+
+        return a - b;
+    }
+
+    var numArray = [140000, 104, 99];
+    numArray.sort(sortNumber);
+
+    // console.log(numArray);
+</script>
