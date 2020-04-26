@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.0.min.js"></script>
+
+    <style>
+        .danger {
+            background-color: red;
+        }
+
+        .normal {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>Ad</td>
+                <td>Soyad</td>
+                <td>Ülke</td>
+                <td>Status</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="normal">
+                <td>Semih</td>
+                <td>Gürel</td>
+                <td>Türkiye</td>
+                <td>0</td>
+            </tr>
+            <tr class="normal">
+                <td>Çağatay</td>
+                <td>Yıldız</td>
+                <td>Lübnan</td>
+                <td>0</td>
+            </tr>
+            <tr class="normal">
+                <td>Lorem</td>
+                <td>Ipsum</td>
+                <td>ABD</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
+<script>
+    //Tıkladığımızda status 0 ise 1 olup class ı danger olacak. Status 0 ise 1 olup class ı normal olacak
+    $("tbody tr").click(function () {
+
+        //console.log($(this).children().last()[0]);
+        var status = $(this).children()[3].innerHTML;
+
+        if (status == "0") {
+            $(this).children()[3].innerHTML = "1"
+            $(this).removeClass("normal");
+            $(this).addClass("danger");
+        }
+        else {
+            $(this).children()[3].innerHTML = "0"
+            $(this).removeClass("danger");
+            $(this).addClass("normal");
+        }
+
+    })
+</script>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .danger {
+            background-color: brown;
+        }
+        .normal{
+            background-color: coral;
+        }
+    </style>
+    <script src="jquery-3.5.0.min.js"></script>
+
+</head>
+
+<body style="text-align: center;">
+    <div>
+        <label for="">Ad:</label>
+        <input type="text" id="ad">
+    </div>
+    <div>
+        <label for="">Fiyat</label>
+        <input type="text" id="fiyat">
+    </div>
+    <div>
+        <label for="">Stok Durum:</label>
+        <input type="text" id="stok">
+    </div>
+    <div>
+        <label for="">Kategori: </label>
+        <select name="" id="kategori">
+            <option value="">Elektronik</option>
+            <option value="">Spor Malzemeleri</option>
+            <option value="">Dağcılık</option>
+            <option value="">Kamp</option>
+        </select>
+    </div>
+    <div>
+        <button>Ekle</button>
+    </div>
+
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <td>Ad</td>
+                <td>Fiyat</td>
+                <td>Stok</td>
+                <td>Kategori</td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
+<script>
+    //eğer stok 10 dan düşük girilirse tr ye danger classı ver
+    $("button").click(function () {
+        var ad = $("#ad").val();
+        var stok = Number($("#stok").val());
+        var fiyat = $("#fiyat").val();
+        var kategori = $("#kategori option:selected").text();
+
+        var classname = "normal";
+        if(stok < 10){
+            classname = "danger";
+        }
+
+        $("tbody").append(`<tr class="`+classname+`">
+        <td>` + ad + `</td> 
+        <td>` + fiyat + `</td> 
+        <td>` + stok + `</td> 
+        <td>` + kategori + `</td> 
+        </tr>`);
+
+
+        var metinselifade = " <p class=``>lorem</p>  "
+        var metinselifade2 = ' <p class="">lorem</p>  '
+        var metinselifade3 = ` <p>lorem</p>  `
+
+
+
+        var ad = "Çağatay";
+        var sonuc = "Adınız: " + ad + " .Hoşgeldiniz...";
+
+        
+
+    })
+</script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.0.min.js"></script>
+    <style>
+        .active{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <div>
+        <label>İlçe Kodu:</label>
+        <input type="text" id="kod">
+        <button>Kaydet</button>
+    </div>
+    <hr>
+    <ul>
+       <li id="101">Beyoğlu</li> 
+       <li id="201">Fatih</li> 
+       <li id="301">Bakırköy</li> 
+       <li id="401">Esenler</li> 
+       <li id="501" >Kadıköy</li> 
+    </ul>
+</body>
+</html>
+<script>
+  
+  
+    var activeid;
+    
+    $("li").click(function(){
+        $("ul li").removeClass("active");
+        $(this).addClass("active")
+
+        var tiklananid =  $(this).attr("id");
+        $("#kod").val(tiklananid);
+
+        activeid = tiklananid;
+
+    })
+
+    $("button").click(function(){
+        var yenikod = $("#kod").val();
+        
+        $("li.active").attr("id",yenikod);
+        // $("#" + activeid).attr("id",yenikod);
+    })
+
+
+
+</script>
