@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.0.min.js"></script>
+    <style>
+        .slide {
+            width: 700px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <div class="gallery">
+
+    </div>
+    <div>
+        <button id="btngeri">Geri</button>
+        <button id="btnileri">İleri</button>
+    </div>
+</body>
+
+</html>
+<script>
+    var resimler = ["ayi.jpg", "koala.jpg", "at.jpg"];
+
+    $(".gallery").append("<img id='1' src='img/" + resimler[1] + "' class='slide' />");
+
+
+
+    $("#btnileri").click(function () {
+        var activeimg = $("img").attr("id")
+        var nextimg = Number(activeimg) + 1;
+
+        if (resimler[nextimg] == undefined) {
+            nextimg = 0;
+        }
+
+        // if(nextimg > (resimler.length - 1)){
+        //     nextimg = 0;
+        // }
+
+        $("img").attr("id", nextimg);
+        $("img").attr("src", "img/" + resimler[nextimg]);
+    });
+
+    setInterval(function () {
+        var activeimg = $("img").attr("id")
+        var nextimg = Number(activeimg) + 1;
+
+        if (resimler[nextimg] == undefined) {
+            nextimg = 0;
+        }
+
+        // if(nextimg > (resimler.length - 1)){
+        //     nextimg = 0;
+        // }
+
+        $("img").attr("id", nextimg);
+        $("img").attr("src", "img/" + resimler[nextimg]);
+    }, 2000);
+
+
+</script>
