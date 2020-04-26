@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.0.min.js"></script>
+</head>
+<body>
+<div>
+    <input type="text" id="veri">
+    <button id="btnekle">Ekle</button>
+    <button id="btncikar">Üst Eleman Çıkar</button>
+    <button id="btncikar2">Alt Eleman Çıkar</button>
+</div>
+<div>
+    <ul></ul>
+</div>
+
+</body>
+</html>
+<script>
+$("#btnekle").click(function(){
+    var data = $("#veri").val();
+    $("ul").append("<li>" + data + "</li>");
+})
+
+$("#btncikar").click(function(){
+    $("ul li").first().remove();
+})
+
+$("#btncikar2").click(function(){
+    $("ul li").last().remove();
+})
+</script>
