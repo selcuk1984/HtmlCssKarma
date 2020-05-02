@@ -15,7 +15,20 @@
 </html>
 
 <script>
-    $.getJSON("https://northwind.now.sh/api/suppliers",function(result) => {
-        
+    $.getJSON("https://northwind.now.sh/api/suppliers",function(data) {
+
+        $.map(data,function(item){
+            var backgroundcolor="white";
+
+            if(item.address.country == "Japan"){
+                backgroundcolor="red";
+            }
+
+            $("ul").append("<li style='background-color:"+backgroundcolor+"'>" + item.contactName + "-" + item.companyName + "</li>")
+            
+    
+
+        })
+
     })
 </script>
