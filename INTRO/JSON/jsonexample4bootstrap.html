@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1>Products</h1>
+         
+          </div>
+
+        <div class="row">
+            <h3>Toplam Ürün: <span class="badge badge-secondary" id="count">0</span></h3>
+
+        </div>
+        <div class="row">
+            <h3>Toplam Fiyat: <span class="badge badge-secondary" id="totalprice">0</span></h3>
+        </div>
+
+
+        <div class="row">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>Price</td>
+                        <td>Supplier</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    $.getJSON("https://northwind.now.sh/api/products", function (result) {
+
+        $("#count").html(result.length);
+
+        var totalprice = 0;
+
+        $.map(result, function (item) {
+
+
+            totalprice = totalprice + Number(item.unitPrice);
+
+            var companyname = "-";
+            if (item.supplier != undefined && item.supplier != null) {
+                companyname = item.supplier.companyName;
+            }
+
+            $("tbody").append(`<tr>
+                <td>`+ item.id + `</td>
+                <td>`+ item.name + `</td>
+                <td>`+ item.unitPrice + `</td>
+                <td>`+ companyname + `</td>
+                </tr>`)
+        })
+
+        $("#totalprice").html(totalprice);
+
+
+        // ecenin yolu
+        // var count = data.filter(function (element) {
+        //     return element.id;
+        // }).length;
+        // document.write(count);
+
+
+    })
+</script>

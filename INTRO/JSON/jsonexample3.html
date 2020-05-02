@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    $.getJSON("https://northwind.now.sh/api/products", function (data) {
+        $.map(data, function (item) {
+
+            var backgroundcolor = "white";
+            if (item.unitPrice > 50) {
+                backgroundcolor = "blue";
+            }
+            $("ul").append("<li style='background-color:" + backgroundcolor + "'>" + item.name + " - " + item.unitPrice + "</li>")
+
+        })
+    })
+
+</script>
