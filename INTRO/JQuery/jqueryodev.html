@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.5.0.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+<div>
+    <input type="text" id="x">
+    <input type="text" id="y">
+    <button>Yakala</button>
+</div>
+<hr>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Ad</td>
+                <td>Ulke</td>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Parkway Drive</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Rotting Christ</td>
+                <td>Greece</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Moonspell</td>
+                <td>Portuqal</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Iron Maiden</td>
+                <td>UK</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+<script>
+    $("button").click(function(){
+        var x = $("#x").val();
+        var y = $("#y").val();
+
+       var data =  $("tbody").children().eq(x).children()[y].innerText;
+
+       console.log(data);
+      
+
+      //2. yol
+       var x = Number($("#PositionX").val()) - 1;
+            var y = $("#PositionY").val();
+            var sum = $("table tr td:nth-child(" + y + ")")[x] != undefined ? $("table tr td:nth-child(" + y + ")")[x] : alert("HATALI DEĞER");
+            sum != undefined ? alert(sum.innerText) : null;
+
+    })
+</script>
+
+<!-- Ekrana bir table, bir buton ve iki input koy. Table ı 5-6 satır kafana göre doldur. İnputlardan birincisine girdiğin değer tablonun
+satırı 2. girdiğin değer sütunu olacak şekilde table daki elemanı yakala ve alert olarak yazdır. -->
