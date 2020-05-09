@@ -20,7 +20,16 @@
 
 <body>
     <div class="container">
+        <div style="text-align: center;">
+            <h1>Ürün Paneli</h1>
+        </div>
         <div>
+            <div class="form-group">
+                <label for="">Kategori</label>
+                <select id="selectcat" class="form-control">
+
+                </select>
+            </div>
             <div class="form-group">
                 <label for="">Name</label>
                 <input type="text" name="" id="name" class="form-control">
@@ -45,6 +54,7 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Unit Price</th>
+                    <th>Category</th>
                 </tr>
             </thead>
             <tbody>
@@ -60,9 +70,18 @@
     Doldur();
 
     $("#save").click(function () {
+
+        var c = new Object();
+        c.name = $('#selectcat :selected').text();
+        c.id = $('#selectcat :selected').val();
+
         var product = new Object();
         product.name = $("#name").val();
         product.unitPrice = $("#price").val();
+        // product.category = {name:c.name,id:c.id};
+        product.category = c;
+
+        console.log(product);
 
         $.ajax({
             url: "https://northwind.now.sh/api/products",
@@ -82,7 +101,7 @@
         $.getJSON("https://northwind.now.sh/api/products", function (data) {
 
             $("tbody tr").remove();
-            
+
             var enpahali = _.maxBy(data, function (o) { return o.unitPrice; });
             var enucuz = _.minBy(data, function (o) { return o.unitPrice; })
 
@@ -91,16 +110,49 @@
 
             $.map(data, function (item) {
 
-               
+                var c = "";
+                if(item.category == undefined){
+                    c = "YOK"
+                }
+                else{
+                    c = item.category.name;
+                }
 
                 $("tbody").append(`<tr>
     <td>`+ item.id + `</td>
     <td>`+ item.name + `</td>
     <td>`+ item.unitPrice + `</td>
+    <td>`+ c + `</td>
     </tr>`)
 
             })
         })
 
+        $.getJSON("https://northwind.now.sh/api/categories", function (data) {
+
+            $.map(data, function (item) {
+                $("select").append("<option value='" + item.id + "'> " + item.name + " </option>")
+            })
+
+        })
     }
+</script>
+
+
+
+<script>
+    var sehir = new Object();
+    sehir.ad = "İzmir";
+    sehir.plaka = "35";
+
+
+    var kisi = new Object();
+    kisi.ad = "Çağatay";
+    kisi.soyad = "Yıldız";
+    kisi.city = sehir;
+
+
+    console.log(kisi.hasOwnProperty('soyad'))
+
+
 </script>
