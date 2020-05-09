@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+//https://northwind.now.sh/api/products
+//categoryid si 3 olan kaç ürün var?
+
+$.getJSON("https://northwind.now.sh/api/products",function(result){
+
+    var total = 0;
+    $.map(result,function(item){
+
+        if(item.categoryId == 3){
+            total++;
+            //total = total + 1;
+        }
+
+    })
+
+   // console.log("Category ID si 3 olan toplam ürün: " + total);
+
+
+})
+
+
+var myObj = { name: "John", age: 31, city: "New York" };
+
+//console.log(myObj);
+//console.log(JSON.stringify(myObj));
+
+var jsondata = '{"name":"John", "age":31, "city":"New York"}';
+var parse = JSON.parse(jsondata);
+
+$.get("https://www.w3schools.com/",function(data){
+    console.log(data)
+})
+
+</script>

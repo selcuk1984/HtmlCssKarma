@@ -13,11 +13,18 @@
 
 <body>
     <div class="container">
-
-        <div class="jumbotron">
-            <h1>Products</h1>
-         
+        <div class="page-header">
+            <h1 class="text-center">Example Page Header</h1>
           </div>
+        <div class="row">
+            <div class="form-group">
+                <label>Ürün ID</label>
+                <input type="text" id="productid">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" id="search">Bul</button>
+            </div>
+        </div>
 
         <div class="row">
             <h3>Toplam Ürün: <span class="badge badge-secondary" id="count">0</span></h3>
@@ -51,6 +58,20 @@
 
 </html>
 <script>
+    $("#search").click(function(){
+
+        var id = $("#productid").val();
+
+        $.getJSON("https://northwind.now.sh/api/products/" + id,function(result){
+
+            console.log(result)
+
+        })
+
+    })
+
+
+
     $.getJSON("https://northwind.now.sh/api/products", function (result) {
 
         $("#count").html(result.length);
@@ -83,6 +104,11 @@
         //     return element.id;
         // }).length;
         // document.write(count);
+
+        $("tr").click(function(){
+            $(this).remove();
+        })
+
 
 
     })
